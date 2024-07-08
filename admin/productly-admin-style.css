@@ -1,0 +1,53 @@
+/*
+*
+* This stylesheet is for styling theme settings and admin panel
+*
+*/
+
+.productly-setting {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #fff;
+  padding-bottom: 20px;
+  margin: 40px 40px 0;
+}
+
+.productly-setting h1 {
+  padding: 30px 40px;
+  font-weight: 600;
+  background-color: #333;
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+}
+
+.productly-setting .setting-section-wrapper {
+  padding: 20px 40px;
+  display: flex;
+}
+
+.productly-setting .section-title {
+  width: 40%;
+}
+
+.productly-setting .user-area input {
+  width: 50%;
+}
+
+.productly-setting .setting-section-wrapper:nth-child(even) {
+  background-color: #efefef;
+}
+
+.productly-setting .form-table th {
+  display: none;
+}
+
+.productly-setting p.submit {
+  margin: 0;
+  padding: 0 40px 20px;
+}
+
+.productly-setting p.submit input {
+  padding: 8px 30px;
+  font-size: 16px;
+  font-weight: 600;
+}

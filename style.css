@@ -3,10 +3,319 @@ Theme Name: Productly Custom Theme
 Theme URI: https://portfolio.hello-muhammad.com/productly/
 Author: Muhammad Russell
 Author URI: https://hello-muhammad.com
-Description: A custom made theme for from sketch design template. Design credit: https://www.linkedin.com/in/abdullah-un-noman/
+Description: A custom made theme from sketch design template. Design credit: https://www.linkedin.com/in/abdullah-un-noman/
 Version: 1.0.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: productly-custom-theme
 Tags: custom-theme, responsive
 */
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("fonts/Poppins-Regular.woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: url("fonts/Poppins-Medium.woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url("fonts/Poppins-SemiBold.woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  src: url("fonts/Poppins-Bold.woff2");
+}
+
+@font-face {
+  font-family: "Gotham";
+  font-weight: 700;
+  src: url("fonts/Gotham-Bold.woff2");
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  font-weight: 400;
+  src: url("fonts/ProximaNova-Regular.woff2");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+}
+
+.site-header {
+  padding: 20px 0;
+}
+
+.productly-container {
+  position: relative;
+  width: 1140px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.productly-container.block {
+  display: block;
+}
+
+.primary-navigation nav {
+  overflow: hidden;
+  transition: all 1s ease;
+  max-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.primary-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.primary-navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  color: #2f281e;
+  transition: color 0.3s ease;
+}
+
+.primary-navigation ul li a:hover {
+  color: #ff9900;
+}
+
+.user-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.productly-btn {
+  padding: 10px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-signin {
+  border: 1px solid #bcd0e5;
+  color: #173a56;
+}
+
+.btn-signin:hover {
+  color: #ff9900;
+  border-color: #ff9900;
+}
+
+.btn-signup {
+  background-color: #ff9900;
+  color: #fff;
+  border: 1px solid #ff9900;
+}
+
+.btn-signup:hover {
+  background-color: #df8703;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 2px;
+  right: 15px;
+  width: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-icon span {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: #173955;
+  transition: all 0.5s ease-in-out;
+}
+
+.primary-navigation.open .menu-icon span:first-child {
+  transform: rotate(-45deg) translateY(13px);
+}
+
+.primary-navigation.open .menu-icon span:nth-child(2) {
+  scale: 0;
+  opacity: 0;
+}
+
+.primary-navigation.open .menu-icon span:last-child {
+  transform: rotate(45deg) translateY(-13px);
+}
+
+.productly-footer .productly-container {
+  gap: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.productly-footer .productly-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: calc(100% - 30px);
+  height: 1px;
+  background-color: #dde7f2;
+}
+
+.productly-widget {
+  width: 100%;
+}
+
+.productly-footer h3 {
+  font-family: "Gotham", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.footer-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-navigation ul a {
+  text-decoration: none;
+  color: #544837;
+}
+
+.btn-footer-signup {
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 11px 18px;
+}
+
+.btn-signin:hover {
+  color: #ff9900;
+}
+
+.productly-signup-input {
+  width: 100%;
+  max-width: 420px;
+  color: #bcd0e5;
+  border: 1px solid #bcd0e5;
+  border-radius: 4px;
+  font-family: "ProximaNova", sans-serif;
+  font-size: 16px;
+  padding: 13px 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.productly-signup-input:focus {
+  outline: none;
+}
+
+.productly-signup-input::placeholder {
+  color: #bcd0e5;
+}
+
+.productly-signup-input::-ms-input-placeholder {
+  color: #bcd0e5;
+}
+
+.not-found-page {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.not-found-page a {
+  color: #ff9900;
+}
+
+@media screen and (min-width: 992px) {
+  .productly-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .primary-navigation nav {
+    max-height: none !important;
+    flex-direction: row;
+    gap: 55px;
+  }
+
+  .primary-navigation ul {
+    flex-direction: row;
+    margin: 0;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .primary-navigation ul li a {
+    padding: 5px;
+  }
+
+  .menu-primary-menu-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .productly-footer .productly-container {
+    gap: 0;
+    padding-top: 104px;
+    padding-bottom: 100px;
+  }
+
+  .productly-widget.widget-1 {
+    width: 29.19%;
+  }
+
+  .productly-widget.widget-2 {
+    width: 22.43%;
+  }
+
+  .productly-widget.widget-3 {
+    width: 19.1%;
+  }
+
+  .productly-widget.widget-4 {
+    width: 29.28%;
+  }
+
+  .footer-navigation ul {
+    padding-top: 23px;
+  }
+
+  .footer-navigation ul li {
+    margin-bottom: 10px;
+  }
+}

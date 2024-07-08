@@ -12,18 +12,20 @@
  * @package Productly Custom Theme
  * @since 1.0.0
  */
+
+get_header();
 ?>
 
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <title><?php bloginfo('name'); ?></title>
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-    <?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
-    <h1>Bismillah</h1>
-    <?php wp_footer(); ?>
-</body>
-</html>
+<main>
+    <?php
+        if (have_posts()) :
+            while (have_posts()) : the_post();
+                the_content();
+            endwhile;
+        else :
+            echo '<p>No content found</p>';
+        endif;
+    ?>
+</main>
+
+<?php get_footer(); ?>
