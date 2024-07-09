@@ -98,6 +98,7 @@ body {
   text-decoration: none;
   font-size: 14px;
   color: #2f281e;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
@@ -107,11 +108,11 @@ body {
 
 .user-buttons {
   display: flex;
-  gap: 15px;
+  gap: 14px;
 }
 
 .productly-btn {
-  padding: 10px 25px;
+  padding: 8px 22px 11px 24px;
   border-radius: 4px;
   text-decoration: none;
   font-size: 16px;
@@ -121,6 +122,7 @@ body {
 }
 
 .btn-signin {
+  padding: 7px 21px 12px 25px;
   border: 1px solid #bcd0e5;
   color: #173a56;
 }
@@ -258,6 +260,18 @@ body {
 }
 
 @media screen and (min-width: 992px) {
+  .site-header {
+    padding: 35px 0 20px;
+  }
+
+  .site-branding {
+    padding-top: 7px;
+  }
+
+  .site-branding img {
+    margin-left: -2px;
+  }
+
   .productly-container {
     flex-direction: row;
     justify-content: space-between;
@@ -270,13 +284,13 @@ body {
   .primary-navigation nav {
     max-height: none !important;
     flex-direction: row;
-    gap: 55px;
+    gap: 49px;
   }
 
   .primary-navigation ul {
     flex-direction: row;
     margin: 0;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
   }
 
@@ -287,6 +301,7 @@ body {
   .menu-primary-menu-container {
     display: flex;
     align-items: center;
+    margin-top: -10px;
   }
 
   .productly-footer .productly-container {
